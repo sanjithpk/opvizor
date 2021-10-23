@@ -1,0 +1,57 @@
+stages:
+  - build
+  - deploy
+  
+build_job:
+  image: node:alpine
+  stage: build
+  before_script:
+    - echo "Installing NPM Dependencies and building Node app"
+  script:
+    - npm install
+    - npm run build
+    - pwd
+   # - killall node > /dev/null || true
+    #- npm start
+    #- exit
+  after_script:
+    - echo "Installation and build successfull"
+  cache:
+    key: install-cache
+    paths:
+      - node_modules/
+  artifacts:
+    paths:
+      - dist/
+
+image: google/cloud-sdk:alpine
+deploy_googleappengine:
+  stage: deploy
+  dependencies: 
+    - build_job
+  before_script:
+  - "ServiceName=opvizor-backend"
+  - "echo $ServiceName"
+  - |
+    cat <<EOF >> app.yaml
+    runtime: nodejs14
+    env_variables:
+      MONGO_URI: "mongodb+srv://cluster0.ea6oo.mongodb.net/"
+      DB_NAME: "Opvisor"
+      DB_USER: "arnima123"
+      DB_PASS: "arnima123"
+    env: standard
+    instance_class: B1
+    manual_scaling:
+      instances: 1
+    service: $ServiceName
+    EOF
+  - "cat app.yaml"
+  - echo $SERVICE_ACCOUNT > ${CI_PIPELINE_ID}.json
+  script:
+  - gcloud auth activate-service-account --key-file $CI_PIPELINE_ID.json
+  - gcloud --project hu18-groupa-angular app deploy --version v2
+  - url=$(gcloud app services browse $ServiceName --no-launch-browser --project hu18-groupa-angular)
+  - echo $url
+  after_script:
+  - rm $CI_PIPELINE_ID.json

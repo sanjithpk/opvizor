@@ -1,0 +1,93 @@
+@import '../../../utils/variables.scss';
+@import '../../../utils/mixins.scss';
+
+.pricing {
+  margin-bottom: 6rem;
+
+  .pricingContainer {
+    max-width: $content-width;
+    margin: 10rem auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .pricingCardContainer {
+      display: flex;
+    }
+  }
+}
+
+@include phone {
+  .pricing {
+    .pricingContainer {
+      box-sizing: border-box;
+      padding: 0 1rem;
+    }
+
+    .pricingCardContainer {
+      flex-direction: column;
+    }
+  }
+}
+
+.pricingCard {
+  background-color: $subtle-primary;
+  box-shadow: $shadow-md;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 2rem 1rem 0;
+
+  .pricingInfo1,
+  .pricingInfo2 {
+    padding: 2rem;
+    border-radius: 0.5rem;
+
+    h4 {
+      font-size: 1.5rem;
+      color: $white;
+    }
+
+    p {
+      color: $white;
+      margin-top: 0.5rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .pricingInfo1 {
+    background-color: $green;
+  }
+
+  .pricingInfo2 {
+    background-color: $blue;
+  }
+
+  .pricingFeatures {
+    p {
+      margin: 1.2rem 0;
+    }
+    span {
+      color: $primary;
+      margin-right: 0.5rem;
+    }
+    a {
+      color: $primary;
+
+      &:hover {
+        border-bottom: 1px solid $primary;
+      }
+    }
+  }
+}
+
+@include phone {
+  .pricingCard {
+    padding: 1rem;
+  }
+}

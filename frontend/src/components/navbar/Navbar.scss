@@ -1,0 +1,131 @@
+@import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: $bg-primary;
+
+  .navbar-placing {
+    display: flex;
+    max-width: $content-width;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+
+    h1 {
+      margin-left: 0.5rem;
+      color: $text-primary;
+    }
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    background-color: $primary;
+    border-radius: 0.2rem;
+  }
+
+  .logo {
+    width: 3rem;
+    height: auto;
+  }
+
+  nav {
+    ul {
+      display: flex;
+    }
+
+    li {
+      .button {
+        background-color: transparent;
+        padding: 0.3rem;
+        margin-left: 1rem;
+        color: $primary;
+      }
+    }
+
+    .notifications {
+      margin-right: 1rem;
+    }
+
+    a {
+      color: $text-primary;
+      font-size: 0.7rem;
+      padding: 0.5rem 1rem;
+      letter-spacing: 0.1rem;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  .activeLink {
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid $primary;
+    color: $primary;
+  }
+
+  .log,
+  .register {
+    text-transform: uppercase;
+    border-radius: 0.1rem;
+    border: 1px solid $primary;
+  }
+
+  .log {
+    color: $text-primary;
+  }
+
+  .register {
+    margin-left: 1rem;
+    background-color: $primary;
+    color: $white;
+    cursor: pointer;
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+@include phone {
+  .navbar {
+    .navbar-placing {
+      .logo-container {
+        margin-left: 1rem;
+      }
+      .logo {
+        width: 2rem;
+      }
+      h1 {
+        font-size: 1.2rem;
+      }
+      .navbar-nav {
+        display: none;
+      }
+    }
+
+    .menu {
+      display: block;
+      color: $primary;
+      background-color: transparent;
+      margin-right: 1rem;
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+}

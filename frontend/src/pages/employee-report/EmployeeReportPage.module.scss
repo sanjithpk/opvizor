@@ -1,0 +1,23 @@
+@import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
+
+.main {
+  max-width: $content-width;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.card {
+  flex: 1 1 100%;
+  padding: 1rem;
+  margin: 1rem;
+  display: grid;
+}
+
+@include phone {
+  .main {
+    flex-direction: column;
+  }
+}

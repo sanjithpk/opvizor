@@ -1,0 +1,31 @@
+@import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
+
+.main {
+  max-width: $content-width;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+}
+.horizontalLayout {
+  display: flex;
+  flex-direction: row;
+}
+.card {
+  flex: 1 1 100%;
+  padding: 1rem;
+  margin: 1rem;
+  display: grid;
+  h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+@include phone {
+  .main {
+    flex-direction: column;
+  }
+  .horizontalLayout {
+    flex-direction: column;
+  }
+}

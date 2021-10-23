@@ -1,0 +1,108 @@
+@import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
+
+footer {
+  background-color: $primary;
+}
+
+.main,
+.bottom {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  color: $white;
+  h1 {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: $white;
+  }
+
+  ul {
+    margin-top: 1.5rem;
+
+    li {
+      margin-top: 1rem;
+    }
+    a {
+      color: $white;
+      padding-bottom: 0.3rem;
+      &:hover {
+        border-bottom: 2px solid $white;
+      }
+    }
+  }
+}
+
+.border {
+  width: 100%;
+  border-top: 1px solid $grey;
+}
+
+.bottom {
+  align-items: center;
+
+  a {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 3rem;
+      height: auto;
+    }
+
+    h2 {
+      color: $white;
+    }
+  }
+
+  p {
+    color: $white;
+    font-size: 1.2rem;
+  }
+
+  .social {
+    color: $white;
+
+    svg {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+@include phone {
+  .main {
+    box-sizing: border-box;
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
+
+    .content {
+      margin-top: 2rem;
+      padding-left: 1rem;
+    }
+  }
+
+  .bottom {
+    flex-direction: column;
+
+    p {
+      margin-top: 1rem;
+    }
+
+    .social {
+      margin-top: 1rem;
+    }
+  }
+}
+
+@include mini {
+  .bottom {
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}

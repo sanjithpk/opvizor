@@ -1,0 +1,16 @@
+@import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
+
+.main {
+  background-color: $bg-primary;
+}
+
+.children {
+  min-height: 76vh;
+}
+
+@include tablet {
+  .children {
+    min-height: 87vh;
+  }
+}

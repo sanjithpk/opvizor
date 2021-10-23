@@ -1,0 +1,71 @@
+@import '../../utils/variables.scss';
+
+.container {
+  max-width: $content-width;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  .header {
+      display: flex;
+      justify-content: space-between;
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+          display: flex;
+          align-items: center;
+          color: $white;
+          padding:0.5rem;
+          margin-left: 1rem;
+      }
+      .close {
+          background-color: $primary;
+      }
+      .delete {
+          background-color: $red;
+      }
+      .edit {
+          background-color: $yellow;
+      }
+  }
+}
+.dual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.icon {
+    margin-right: 1rem;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 1rem;
+    .marginTop {
+        margin-top: 2rem;
+    }
+    .marginTopSmall {
+        margin-top: 0.5rem;
+    }
+    .centerWithIcon {
+        display: flex;
+        align-items: center;
+        color: $text-primary;
+    }
+    .subOpContainer {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+    .subOperation {
+        border: 1px $primary dashed;
+        margin-right: 2rem;
+        color: $text-primary;
+        padding: 0.5rem 1rem;
+    }
+}
+
+

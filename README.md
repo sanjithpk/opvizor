@@ -1,2 +1,2 @@
-# opvizor
-Opvizor
+# Opvizor
+An operations management solution

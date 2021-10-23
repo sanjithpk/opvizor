@@ -1,0 +1,15 @@
+@import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
+
+.tab-content {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $subtle-primary;
+  padding: 1rem;
+}
+
+@include phone {
+  .tab-content {
+    padding: 0;
+  }
+}

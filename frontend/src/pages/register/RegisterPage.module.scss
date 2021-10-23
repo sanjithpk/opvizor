@@ -1,0 +1,74 @@
+@import '../../utils/variables.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 20rem;
+  box-shadow: $shadow;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+
+    .logo {
+      background-color: $primary;
+      border-radius: 0.2rem;
+    }
+
+    h1 {
+      margin-top: 0.7rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  .content {
+    width: 100%;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    .textInput {
+      margin: 0.5rem 1rem;
+    }
+  }
+
+  .role {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 1rem;
+  }
+
+  .button {
+    padding: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  .submit {
+    background-color: $primary;
+    color: $white;
+    font-size: 1.1rem;
+    margin: 1rem 1rem 0;
+  }
+
+  .footer {
+    margin-bottom: 1rem;
+
+    a {
+      color: $text-primary;
+    }
+  }
+}

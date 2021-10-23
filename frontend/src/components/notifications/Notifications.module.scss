@@ -1,0 +1,64 @@
+@import '../../utils/variables.scss';
+
+.paper {
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heading {
+    padding: 0.8rem 1rem;
+  }
+
+  .noNew {
+    padding: 1rem;
+  }
+
+  .button {
+    background-color: transparent;
+    padding: 0.3rem;
+    color: $primary;
+  }
+
+  li {
+    a {
+      display: flex;
+      color: $text-primary;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    .assignmentIcon {
+      margin-right: 1rem;
+    }
+
+    h5 {
+      font-size: 1rem;
+      font-family: 'Montserrat', 'sans-serif';
+      letter-spacing: normal;
+      color: inherit;
+    }
+
+    p {
+      margin-top: 0.2rem;
+      font-size: 0.9rem;
+      color: inherit;
+      opacity: 0.54;
+    }
+  }
+}
+
+.bottom {
+  justify-content: center;
+
+  h6 {
+    letter-spacing: normal;
+    font-size: 1rem;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}

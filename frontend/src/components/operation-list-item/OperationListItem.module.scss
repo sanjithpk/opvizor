@@ -1,0 +1,27 @@
+@import '../../utils/variables.scss';
+
+.frequency {
+  p {
+    font-size: small;
+    margin-right: auto;
+    margin-left: auto;
+    width: fit-content;
+    padding: 0.2rem 0.5rem;
+    color: $white;
+  }
+}
+.hours {
+  background-color: $red;
+}
+.days {
+  background-color: $green;
+}
+.subOperation {
+  button {
+    background-color: $bg-primary;
+    text-transform: uppercase;
+    color: $primary;
+    border: 1px $primary solid;
+    padding: 0.5rem 1rem;
+  }
+}

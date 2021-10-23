@@ -1,0 +1,29 @@
+@import '../../utils/variables.scss';
+
+.section {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: $primary;
+    font-size: 15rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  a {
+    margin-top: 1rem;
+    color: $primary;
+  }
+}

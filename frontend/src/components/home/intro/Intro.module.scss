@@ -1,0 +1,93 @@
+@import '../../../utils/variables.scss';
+@import '../../../utils/mixins.scss';
+
+.intro {
+  display: flex;
+  max-width: $content-width;
+  margin: 0 auto;
+  margin-top: 6rem;
+
+  .introDesc,
+  .introIllustration {
+    width: 50%;
+  }
+
+  .introDesc {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    h2 {
+      color: $primary;
+      font-size: 4rem;
+      line-height: 4.2rem;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $white;
+      background-color: $primary;
+      border: none;
+      border-radius: 0.2rem;
+    }
+  }
+
+  .introIllustration {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    img {
+      width: 70%;
+      height: auto;
+    }
+  }
+}
+
+@include phone {
+  .intro {
+    flex-direction: column-reverse;
+    margin-top: 2rem;
+
+    .introDesc,
+    .introIllustration {
+      width: 100%;
+    }
+
+    .introDesc {
+      box-sizing: border-box;
+      padding: 1rem 1rem 0;
+
+      h1 {
+        font-size: 1rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .introIllustration {
+      justify-content: center;
+    }
+  }
+}

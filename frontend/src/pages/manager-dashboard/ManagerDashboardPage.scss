@@ -1,0 +1,32 @@
+@import '../../utils/variables.scss';
+@import '../../utils/mixins.scss';
+
+.manager-dashboard {
+  margin: 0 auto;
+  max-width: $content-width;
+  margin-top: 1rem;
+
+  .tab-appbar {
+    background-color: $primary;
+
+    .MuiTabs-flexContainer {
+      justify-content: space-around;
+    }
+
+    @include phone {
+      .MuiTabs-flexContainer {
+        justify-content: flex-start;
+      }
+    }
+
+    .MuiTab-wrapper {
+      color: $white;
+    }
+  }
+}
+
+@include phone {
+  .manager-dashboard {
+    margin: 1rem;
+  }
+}

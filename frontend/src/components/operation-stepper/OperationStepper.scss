@@ -1,0 +1,20 @@
+@import '../../utils/variables.scss';
+
+.operation-stepper {
+  width: 100%;
+  max-width: $content-width;
+  margin: 1rem auto 0;
+
+  h1 {
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .MuiPaper-root {
+    box-shadow: $shadow-md;
+
+    .MuiStepIcon-text {
+      fill: #fff;
+    }
+  }
+}

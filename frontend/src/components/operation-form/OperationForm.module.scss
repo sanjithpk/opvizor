@@ -1,0 +1,32 @@
+@import '../../utils/variables.scss';
+
+.container {
+  max-width: $content-width;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    .marginTop {
+        margin-top: 2rem;
+    }
+    .buttonCancel {
+        background-color: $red;
+        color: $white;
+    }
+    .buttonAdd {
+        background-color: $green;
+        color: $white;
+    }
+}
+.dual {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+}
+

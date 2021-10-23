@@ -1,0 +1,14 @@
+@import '../../utils/mixins.scss';
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+}
+
+@include phone {
+  .container {
+    margin-top: 0;
+  }
+}

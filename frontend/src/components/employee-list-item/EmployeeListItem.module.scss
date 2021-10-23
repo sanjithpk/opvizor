@@ -1,0 +1,15 @@
+@import '../../utils/variables.scss';
+
+.doneButton {
+  color: $green;
+}
+
+.clearButton {
+  color: $red;
+}
+
+.dialogContent {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+}

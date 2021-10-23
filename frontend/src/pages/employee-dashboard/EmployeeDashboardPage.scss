@@ -1,0 +1,19 @@
+@import '../../utils/variables.scss';
+
+.employee-dashboard {
+  margin: 0 auto;
+  max-width: $content-width;
+  margin-top: 1rem;
+
+  .tab-appbar {
+    background-color: $primary;
+
+    .MuiTabs-flexContainer {
+      justify-content: space-around;
+    }
+
+    .MuiTab-wrapper {
+      color: $white;
+    }
+  }
+}

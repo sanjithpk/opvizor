@@ -1,0 +1,56 @@
+@import '../../../utils/variables.scss';
+@import '../../../utils/mixins.scss';
+
+.companies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8rem;
+  $size: 200px;
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .companyContainer {
+    display: flex;
+    background-color: $bluish-grey;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    width: 50%;
+    height: 5rem;
+  }
+
+  .hashedin {
+    width: $size;
+    height: auto;
+    margin-right: 3rem;
+  }
+
+  .deloitte {
+    width: $size;
+    height: $size * 26px / 120px;
+  }
+}
+
+@include phone {
+  .companies {
+    $size: 100px;
+
+    .companyContainer {
+      width: 70%;
+    }
+
+    .hashedin {
+      width: $size;
+      height: auto;
+      margin-right: 3rem;
+    }
+
+    .deloitte {
+      width: $size;
+      height: $size * 26px / 120px;
+    }
+  }
+}

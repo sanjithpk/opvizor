@@ -1,0 +1,57 @@
+// COLORS
+
+.light {
+  --primary: #209cee;
+  --bg-primary: #fff;
+  --text-primary: #000;
+  --silver: #f9fafc;
+  --bluish-grey: #f7fcfd;
+  --subtle-primary: #fdfdfd;
+
+  --table-hover-bg: #f5f5f5;
+  --table-bg: #fcfcfc;
+  --table-border: #f0f0f0;
+}
+
+.dark {
+  --primary: #266eda;
+  --bg-primary: #0b0e11;
+  --text-primary: #fff;
+  --silver: #151a21;
+  --bluish-grey: #39414d;
+  --subtle-primary: #13181d;
+
+  --table-hover-bg: #171924;
+  --table-bg: #030303;
+  --table-border: #0f0f0f;
+}
+
+$primary: var(--primary);
+$white: #fff;
+$black: #000;
+$red: #e03b24;
+$blue: #3865a3;
+$green: #64a338;
+$yellow: #ffcc00;
+$silver: var(--silver);
+$grey: #e5e7eb;
+
+$text-primary: var(--text-primary);
+
+$bluish-grey: var(--bluish-grey);
+$subtle-primary: var(--subtle-primary);
+$light-grey: #e5e9f2;
+
+$bg-primary: var(--bg-primary);
+$table-hover-bg: var(--table-hover-bg);
+$table-bg: var(--table-bg);
+$table-border: var(--table-border);
+
+// WIDTH
+
+$content-width: 1210px;
+
+// SHADOW
+$shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);

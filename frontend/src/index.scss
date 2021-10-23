@@ -1,0 +1,58 @@
+@import './utils/variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+main {
+  background-color: $bg-primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  color: $text-primary;
+}
+
+.MuiOutlinedInput-input:-webkit-autofill {
+  caret-color: $text-primary !important;
+  -webkit-text-fill-color: $text-primary !important;
+  box-shadow: 0 0 0 100px $bg-primary inset i !important;
+  -webkit-box-shadow: 0 0 0 100px $bg-primary inset !important;
+}

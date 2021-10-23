@@ -1,0 +1,87 @@
+@import '../../../utils/variables.scss';
+@import '../../../utils/mixins.scss';
+
+.basic {
+  align-items: center;
+  max-width: $content-width;
+  margin: 0 auto;
+  margin-top: 6rem;
+
+  .basic1,
+  .basic2 {
+    display: flex;
+    margin-top: 8rem;
+  }
+
+  .basic2 {
+    flex-direction: row-reverse;
+  }
+}
+
+@include phone {
+  .basic {
+    .basic1,
+    .basic2 {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      margin-top: 8rem;
+    }
+  }
+}
+
+.basicDescription,
+.basicIllustration {
+  width: 50%;
+}
+
+@include phone {
+  .basicDescription,
+  .basicIllustration {
+    width: 100%;
+  }
+}
+
+.basicDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 4rem;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+
+    span {
+      margin-right: 0.5rem;
+      color: $primary;
+      font-weight: 600;
+    }
+  }
+}
+
+@include phone {
+  .basicDescription {
+    box-sizing: border-box;
+    margin-top: 2rem;
+    padding: 0 1rem;
+
+    h2 {
+      font-size: 1.9rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+.basicIllustration {
+  width: 50%;
+  height: auto;
+}
